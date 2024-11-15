@@ -28,9 +28,9 @@ from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
 
 # %%
-Global = pd.read_csv("../data/Global Temperature Anomalies.csv")
-pi = pd.read_csv("../data/piControl.csv")
-force = pd.read_csv("../data/forcings.csv")
+Global = pd.read_csv("./data/Global Temperature Anomalies.csv")
+pi = pd.read_csv("./data/piControl.csv")
+force = pd.read_csv("./data/forcings.csv")
 
 Global = Global[Global['Hemisphere'] == 'Global'][["Year", "J-D"]]
 Global.columns = ["Year","Observed"]
