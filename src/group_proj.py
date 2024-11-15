@@ -456,6 +456,11 @@ def update_chart(*args):
 
 if __name__ == '__main__':
     app.run_server(debug=False,port = 9000)
+    
+import streamlit as st
+st.title("Streamlit Dashboard with Embedded Dash App")
+# 使用 iframe 嵌入 Dash 应用
+st.components.v1.iframe(src="http://127.0.0.1:9000", width=800, height=600)
 
 
 # %% [markdown]
