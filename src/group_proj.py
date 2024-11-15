@@ -455,7 +455,7 @@ def update_chart(*args):
 ##     app.run_server(debug=True, port=8063)
 
 if __name__ == '__main__':
-    app.run_server(debug=False,port = 8060)
+    app.run_server(debug=False,port = 0)
 
 
 # %% [markdown]
