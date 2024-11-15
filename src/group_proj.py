@@ -451,8 +451,12 @@ def update_chart(*args):
 ## Click on the button to show the corresponding line, click again to disappear, support multiple lines playback at the same time
 ## Try to use slide track, the tail markers will blink when the play button is playing.
 
+# if __name__ == '__main__':
+#     app.run_server(debug=True, port=8063)
+
 if __name__ == '__main__':
-    app.run_server(debug=True, port=8063)
+    app.run_server(debug=False)
+
 
 # %% [markdown]
 # We acknowledge the use of ChatGPT to debug code that was subsequently included in modified form in my report (https://chatgpt.com/share/6731c4a5-c804-8004-91b9-ccb8a51e7929). We entered the following prompt(s) on November 11, 2024: How to animate data.......
