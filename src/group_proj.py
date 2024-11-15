@@ -26,6 +26,8 @@ from dash import Dash, dcc, html, Input, Output
 import plotly.graph_objs as go
 from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
+import streamlit as st
+import streamlit.components.v1 as components
 
 # %%
 Global = pd.read_csv("./data/Global Temperature Anomalies.csv")
