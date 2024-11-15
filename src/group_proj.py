@@ -455,12 +455,18 @@ def update_chart(*args):
 ##     app.run_server(debug=True, port=8063)
 
 if __name__ == '__main__':
-    app.run_server(debug=False,port = 6500)
+    app.run_server(debug=False,port = 9000)
     
-## import streamlit as st
-## st.title("Streamlit Dashboard with Embedded Dash App")
-## # 使用 iframe 嵌入 Dash 应用
-## st.components.v1.iframe(src="http://127.0.0.1:9000", width=800, height=600)
+# 在独立线程中运行 Dash
+thread = threading.Thread(target=run_dash)
+thread.daemon = True
+thread.start()
+
+# Streamlit 应用部分
+st.title("Streamlit Application with Embedded Dash App")
+components.iframe("http://127.0.0.1:9000", width=800, height=600)
+
+st.write("Below is a placeholder for more Streamlit components.")
 
 
 # %% [markdown]
